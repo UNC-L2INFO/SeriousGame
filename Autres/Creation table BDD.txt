@@ -1,0 +1,184 @@
+CREATE TABLE InfoCompte(
+    IDCompte integer(4) AUTO_INCREMENT,
+    LogginCompte varchar(16),
+    MDPCompte varchar(16),
+    PseudoCompte varchar(16),
+    PrenomUtilisateur varchar(16),
+    NomUtilisateur varchar(16),
+    emailUtilisateur varchar(30),
+    AgeUtilisateur integer(3),
+    PartiesJouéesAtt integer(6),
+    PartiesPerduesAtt integer(6),
+    PartiesJouéesDeff integer(6),
+    PartiesPerduesDeff integer(6),
+    Privilège varchar(10),
+    PRIMARY KEY (IDCompte)
+);
+CREATE TABLE DemandeAmis(
+    IDCompte integer(4),
+	IDCompte2 integer(4),
+    MessageDeamndeAmis varchar(40),
+    DateDemandeAmis date not null,
+    CONSTRAINT AjoutAmis PRIMARY KEY (IDCompte,IDCompte2),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte),
+    FOREIGN KEY (IDCompte2) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE Ladder(
+    IDCompte integer(4),
+    PointsSolo integer(4),
+	PRIMARY KEY (IDCompte),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE SujetQuestion(
+    NomSujet varchar(20),
+    IDQuestion integer(4),
+    DescriptionSujet varchar(30),
+
+    PRIMARY KEY (NomSujet),
+);
+CREATE TABLE ThèmeQuestion(
+    NomThème varchar(20),
+    IDQuestion integer(4),
+    DescriptionSujet varchar(30),
+
+    PRIMARY KEY (NomThème)
+);
+CREATE TABLE Question(
+    NomThème varchar(20),
+    NomSujet varchar(20),
+    IDQuestion integer(4),
+    Question varchar(50),
+    bonnerep varchar(20),
+    mauvaiserep1 varchar(20),
+    mauvaiserep2 varchar(20),
+    mauvaiserep3 varchar(20),
+    
+
+    PRIMARY KEY (IDQuestion),
+    FOREIGN KEY (NomThème) REFERENCES Thèmequestion(NomThème),
+    FOREIGN KEY (NomSujet) REFERENCES Sujetquestion(NomSujet)
+);
+ALTER TABLE SujetQuestion ADD FOREIGN KEY (IDQuestion) references Question(IDQuestion);
+ALTER TABLE ThèmeQuestion ADD FOREIGN KEY (IDQuestion) references Question(IDQuestion);
+CREATE TABLE Succès(
+    NomSuccès varchar(20),
+    DescriptionSuccès varchar(30),
+
+    PRIMARY KEY (NomSuccès)
+);
+CREATE TABLE PossèdeAmis(
+    IDCompte integer(4),
+    IDCompte2 integer(4),
+
+    CONSTRAINT LiensAmis PRIMARY KEY (IDCompte,IDCompte2),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte),
+    FOREIGN KEY (IDCompte2) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE BanquedeQuestion(
+    IDCompte integer(4),
+    IDQuestion integer(4),
+
+    CONSTRAINT Question PRIMARY KEY (IDCompte,IDQuestion),
+    FOREIGN KEY (IDQuestion) REFERENCES Question(IDQuestion)
+);
+CREATE TABLE Avatar(
+    NomAvatar varchar(20),
+    NomThème varchar(20),
+
+    CONSTRAINT InfoCompte PRIMARY KEY (NomAvatar,NomThème),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte),
+    FOREIGN KEY (IDCompte2) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE AssociéAvatar(
+    NomAvatar varchar(20),
+    NomThème varchar(20),
+
+    CONSTRAINT LienAvatarThèmes PRIMARY KEY (NomAvatar,NomThème),
+    FOREIGN KEY (NomThème) REFERENCES thèmequestion(NomThème)
+);
+CREATE TABLE Guilde(
+    IDGuilde integer(4),
+    IDCompte integer(4),
+    NomGuilde varchar(20),
+    DescriptionGuilde varchar(30),
+    NiveauGuilde integer(4),
+    PartiesJouées integer(6),
+    PartiesGagnées integer(6),
+
+    CONSTRAINT LienGuildeLeader PRIMARY KEY (IDGuilde,IDCompte),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE GuildeVGuilde(
+    IDGuilde integer(4),
+    IDGuilde2 integer(4),
+    PointGuilde integer(4),
+    PointGuilde2 integer(4),
+    IDQuestionnaireGuilde integer(4),
+    IDQuestionnaireGuilde2 integer(4),
+
+    CONSTRAINT GVG PRIMARY KEY (IDGuilde,IDGuilde2),
+    FOREIGN KEY (IDGuilde) REFERENCES guilde(IDGuilde),
+    FOREIGN KEY (IDGuilde2) REFERENCES guilde(IDGuilde)
+);
+CREATE TABLE Tchat(
+    IDMessage integer(6),
+    IDCompte integer(4),
+    IDDestinataire integer(4),
+    Message varchar(30),
+    DateMessage date not null,
+
+    CONSTRAINT MessageSource PRIMARY KEY (IDMessage,IDCompte),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte),
+    FOREIGN KEY (IDDestinataire) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE PropositionQuestion(
+    IDProposition integer(6),
+    IDCompte integer(4),
+    NomThème varchar(20),
+    NomSujet varchar(20),
+    Question varchar(50),
+    bonnerep varchar(20),
+    mauvaiserep1 varchar(20),
+    mauvaiserep2 varchar(20),
+    mauvaiserep3 varchar(20),
+    Valider varchar(3),
+
+    CONSTRAINT MessageSource PRIMARY KEY (IDProposition,IDCompte),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte),
+    FOREIGN KEY (NomSujet) REFERENCES sujetquestion(NomSujet),
+    FOREIGN KEY (NomThème) REFERENCES thèmequestion(NomThème)
+    
+);
+CREATE TABLE PropositionSujet(
+    IDProposition integer(6),
+    IDCompte integer(4),   
+    NomSujet varchar(20),
+    DescriptionSujet varchar(50),
+    likes integer(4),
+    dislikes integer(4),   
+
+    CONSTRAINT PropositionSujet PRIMARY KEY (IDProposition,IDCompte),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE AppartientGuilde(
+    IDGuilde integer(4),
+    IDCompte integer(4),   
+
+    CONSTRAINT appartenanceguilde PRIMARY KEY (IDGuilde,IDCompte),
+        FOREIGN KEY (IDGuilde) REFERENCES guilde(IDGuilde),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE possèdeavatar(
+    IDCompte integer(4),
+    NomAvatar varchar(20),   
+
+    CONSTRAINT possedeavatar PRIMARY KEY (NomAvatar,IDCompte),
+    FOREIGN KEY (NomAvatar) REFERENCES avatar(NomAvatar),
+    FOREIGN KEY (IDCompte) REFERENCES infocompte(IDCompte)
+);
+CREATE TABLE Bonus(
+    NomBonus varchar(20),
+    DescriptionBonus varchar(20),
+   
+    PRIMARY KEY (NomBonus)
+);
