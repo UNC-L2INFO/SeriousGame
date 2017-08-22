@@ -1,18 +1,14 @@
-<!doctype html>
-<html lang="fr">
+<?php
+// charge et initialise les bibliothèques globales
+require_once 'model.php';
+require_once 'controllers.php';
+// route la requête en interne
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+if ( '/SeriousGame/index.php' == $uri && isset($_POST['login']) && isset($_POST['password']) ){
+ 	ComptePerso_action($_POST['login'], $_POST['password']);
+}
+elseif ( '/SeriousGame/index.php' == $uri || '/SeriousGame/' == $uri ) {
+ 	login_action();
+}
 
-	<head>
-		<title></title>
-		<meta name="Description" content=""/>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
-		<link rel="Stylesheet" href="vue/polices.css" type="text/css">
-		<link rel="Stylesheet" href="vue/layout.css" type="text/css">
-		<!-- Remplir avec le bon css -->
-		<link rel="Stylesheet" href="vue/.css" type="text/css"> 
-		<link rel="Stylesheet" href="vue/bootstrap.min.css" type="text/css">
-	</head>
-
-	<body class="accueil">
-
-	</body>
-</html>
+?>
