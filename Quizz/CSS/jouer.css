@@ -1,0 +1,65 @@
+h1.mode{
+	margin-top: 20vh;
+	font-family: "saucer_bbregular";
+	font-size: 3em;
+	color: black;
+}
+
+a div{
+	height: 100vh;
+}
+
+a:nth-child(1) div{
+	background-color: #3339ED;
+}
+
+a:nth-child(1):hover div{
+	background-color: #2e33d4;
+}
+
+a:nth-child(2) div{
+	background-color: #33EDED;
+}
+
+a:nth-child(2):hover div{
+	background-color: #2ed4d4;
+}
+
+a:nth-child(3) div{
+	background-color: #64ED33;
+}
+
+a:nth-child(3):hover div{
+	background-color: #59d42e;
+}
+
+a:nth-child(4) div{
+	background-color: #EDE133;
+}
+
+a:nth-child(4):hover div{
+	background-color: #d4c92e;
+}
+
+a:nth-child(5) div{
+	background-color: #ED9033;
+}
+
+a:nth-child(5):hover div{
+	background-color: #d4812e;
+}
+
+a:nth-child(6) div{
+	background-color: #ED3333;
+}
+
+a:nth-child(6):hover div{
+	background-color: #d42e2e;
+}
+
+@media screen and (max-width: 991px){
+	h1.mode{
+		margin-top: 0;
+		padding-top: 20vh;
+	}
+}
