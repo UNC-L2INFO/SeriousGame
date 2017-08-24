@@ -1,3 +1,7 @@
+nav.menu-commun{
+	position: fixed;
+}
+
 h1.mode{
 	margin-top: 20vh;
 	font-family: "saucer_bbregular";
