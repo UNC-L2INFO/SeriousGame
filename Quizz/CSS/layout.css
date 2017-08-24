@@ -1,1 +1,141 @@
+nav.menu-commun{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+}
 
+div.dropdown.bouton960px{
+	display: none;
+	margin: 20px;
+}
+
+div.bouton-co-deco > button.btn.btn-primary.dropdown-toggle{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+div.dropdown.orange-grey-style > button{
+	background-color: transparent;
+	border-color: white;
+	border-radius: 0;
+}
+
+div.dropdown.orange-grey-style.open > button{
+	background-color: rgb(56,54,52);
+	border-color: white;
+}
+
+div.dropdown > ul.dropdown-menu{
+	top: 98%;
+	margin: 0;
+	border-color: white;
+	border-radius: 0;
+	background-color: rgb(56,54,52);
+}
+
+div.dropdown > ul.dropdown-menu > li > a{
+	color: white;
+}
+
+div.dropdown > ul.dropdown-menu > li:hover > a{
+	color: black;
+}
+
+ul.dropdown-menu .divider{
+	background-color: white;
+}
+
+span.glyphicon.glyphicon-th-large{
+	color: white;
+}
+
+ul.dropdown-menu.dropdown-menu-right{
+	right: 16px;
+}
+
+nav > a{
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	color: white;
+	font-family: "saucer_bbregular";
+	font-size: 40pt;
+	transition: color 1s;
+	width: 120px;
+}
+
+nav > a:hover{
+	text-decoration: none;
+	color: orange;
+}
+
+ul.menu-nav{
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	padding-left: 7px;
+}
+
+li{
+	list-style: none;
+	margin-right: 20px;
+}
+
+li:nth-child(5){
+	margin-right: 7px;
+}
+
+li:hover{
+	background-color: white;
+}
+
+ul.dropdown-menu > li{
+	margin-right: 0;
+}
+
+.menu-nav button{
+	width: 100px;
+	border-color: #c7801b;
+	background-color: #fd9c11;
+}
+
+.menu-nav button.btn-lg{
+	width: 150px;
+}
+
+button.btn.btn-primary.dropdown-toggle{
+	margin: 0;
+	padding: 3px;
+	background-color: transparent;
+	border-color: white;
+}
+
+div.dropdown{
+	display: inline-block;
+	width: 120px;
+}
+
+span.glyphicon.glyphicon-cog{
+	color: lightgreen;
+}
+
+span.glyphicon.glyphicon-off{
+	color: red;
+}
+
+@media screen and (max-width: 992px){
+	nav > a , ul.menu-nav , div.dropdown{
+		display: none;
+	}
+
+	div.dropdown.bouton960px{
+		display: inline-block;
+	}
+}
