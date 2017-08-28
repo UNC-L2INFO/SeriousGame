@@ -1,0 +1,231 @@
+/* Page Compte */
+.cadreAvatar{
+	/* Premier cadre/ligne de la page compte */
+	margin-top: 1%;
+	
+	font-size: 1.4em;
+	border: 2px solid black;
+	
+	background-color: rgb(135,185,228);
+}
+.cadreGC{
+	/* 2ème cadre/ligne de la page compte */
+	/* Pas de bord car composé de sous cadre */
+	margin-top: 1%;
+	font-size: 1.4em;
+}
+.cadreListeAmis{
+	/* sous cadre  de la 3ème ligne */
+	margin-top: 15px;
+	border: 2px solid black;
+
+	height: 233px;
+	width: 650px;
+	/* Taille Fixe pour pouvoir aligner et gérer les bordures des cadres */
+	background-color: rgb(127,188,7);
+}
+
+
+
+
+.soustitre{
+	/* Soustitre encadré mis dans des blocks */
+	margin-top: 5%;
+	border: 2px solid black;
+	background-color: rgb(94,218,209);
+}
+
+.asoustitre{
+	/* soutitre particulié: encadre un a besoin d'un placement différents */
+	margin-top: 20%;
+	border: 2px solid black;
+	background-color: rgb(94,218,209);
+}
+
+/* Partie Guilde */
+.align{
+	/* aligne les blocks*/
+	background-color: rgba(188,7,7,0.75);
+	border: 2px solid black;
+	width: 750px;
+}
+.cadreguilde{
+	border: 2px solid black;
+	font-size: 1.4em;
+	background-color: rgb(244,227,41);
+}
+.Nomguilde{
+	/* cadre à l'interieur d'un blocks */
+	/* Titre */
+	margin-top: 15px;
+	border: 2px solid black;
+
+	text-align: center;
+	font-size: 0.6em;
+	color:white;
+
+	background-color: rgba(188,7,7,0.75);
+}
+.descriptionGuilde{
+	/* cadre comprenant du texte */ 
+	height: 250px;
+	background-color: rgba(188,7,7,0.75);
+	color:white;
+}
+.niveauguilde{
+	/* cadre comprenant un chiffre */
+	margin-left: 88%;
+	/* positionnement plus a gauche */
+	font-size: 0.7em;
+	border: 2px solid black;
+	background-color: rgba(188,7,7,0.75);
+}
+/* Partie classement */
+.cadreclassement{
+	/* cadre gauche */
+	width: 300px;
+}
+.acadreclassement{
+	/* cadre droit */
+	margin-left: 0.5%;
+	width: 300px;
+	float: right;
+}
+.listeclassement{
+	/* cadre des 2 listes classement */
+	border: 2px solid black;
+	height: 304px;
+	background-color: rgb(244,227,41);
+}
+.cadreClassement{
+	/* encadre les 2 classements */
+	border: 2px solid black;
+	height: 362px;
+}
+.titreclassement{
+	/* encadre les titres de classement*/
+	margin-top: 15px;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 0.6em;
+	background-color: rgb(244,227,41);
+}
+/* Partie Amis */
+.cadremessage{
+	/* cadre large */
+	margin-top: 15px;
+	border: 2px solid black;
+	float left;
+	height: 50px;
+	background-color: rgb(127,188,7);
+}
+
+/* Partie Lien: Bouton/recherche/parcourir */
+.multibouton{
+	/* cadre recherche, parcourir */
+	margin-top: 15px;
+	border: 2px solid black;
+
+	font-size: 1.4em;
+	text-align: center;
+	
+	background-color: rgb(159,13,151);
+}
+
+.separation{
+	/* astuce wtf pour séparer des blocs bootstraps */
+	/* fonctionnement inconnu */
+	width: 10px;
+}
+/* Partie Question */
+.cadrequestion{
+	margin-top: 15px;
+	border: 2px solid black;
+	background-color: rgb(7,66,188);
+}
+.tquestion{
+	margin-left: 30%;
+	border-collapse: separate;
+	border-spacing: 30px 25px;
+}
+.reponse{
+	border: 2px solid black;
+	width: 100px;
+	background-color: white;
+		margin-left: 155px;
+}
+.question{
+	margin-top: 30px;
+	margin-left: 10%;
+	background-color: white;
+	border: 2px solid black;
+	height: 100px;
+	width:900px;
+}
+.BQ{
+	background-color: white;
+	border: 2px solid black;
+}
+.espace{
+	margin-left: 35px;
+}
+.MG{
+	margin-top: 15px;
+}
+footer{
+	background-color: white;
+	height:50px;
+}
+/* Page Creation Compte */
+.cadrecreation{
+	margin-top: 30px;
+	border: 2px solid black;
+	color: white;
+	background-color: rgba(188,7,7,0.75);
+}
+
+
+.creationcompte {
+    border-collapse: separate;
+    border-spacing: 5px 25px; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
+}
+.cadreconnection{
+	margin-top: 30px;
+	padding-top: 60px;
+	border: 2px solid black;	
+	color: white;
+	background-color: rgb(7,66,188);
+	height: 300px;
+}
+.tconnection{
+	border-collapse: separate;
+	border-spacing: 30px 25px;
+}
+.creerC{
+	padding-left: 75%;
+	color: white;
+}
+.bouton{
+	border: 2px solid black;
+	color: black;
+	background-color: white;
+}
+input{
+	width:250px;
+	height:30px;
+	margin-left: 60px;
+	margin-bottom: 40px;
+	border: 2px solid black;
+	color: black;
+	background-color: white;
+}
+.ndcentrer{
+	margin-left: 80px;
+}
+.boutonenvoyer{
+	margin-left: 9px;
+	width:100px;
+	border: 2px solid black;
+	color: black;
+	background-color: white;
+}
