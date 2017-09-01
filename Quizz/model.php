@@ -30,17 +30,19 @@ function is_user( $login, $password ){
 	return $isuser;     
 }
 
-function login_idcompte( $login){
+function login_idcompte( $login ){
 	$link = open_database_connection();
-	$query= 'SELECT IDCompte FROM infocompte WHERE LogginCompte ="'.$login.'" )';
+	$query= 'SELECT IDCompte FROM infocompte WHERE LogginCompte ="CompteEssai"';
 	echo $query;
 	$idcompte= mysqli_query($link, $query ); 
 
-	echo mysqli_query($link, $query );
+	$res = mysqli_fetch_array($idcompte);
+	var_dump($idcompte);
+
 	echo 'idcompte=';
-	echo $idcompte;
+	$resu=$res['IDCompte'];
 	close_database_connection($link);
-	return $idcompte;
+	return $resu;
 }
 
 function PossedeSucces( $login ){
@@ -54,8 +56,6 @@ function PossedeSucces( $login ){
 	if( mysqli_num_rows( $result) )        
 		$succes = True;
 	
-	echo $query ;
-	printf("Select a retourné %d lignes.", $result->num_rows);
 	mysqli_free_result( $result );    
 	close_database_connection($link);
 
