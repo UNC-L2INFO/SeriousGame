@@ -1,18 +1,8 @@
-<!doctype html>
-<html lang="fr">
+<?php $title = 'Accueil'; ?>
+<?php $desc = 'Page d\'accueil affichant les news, le top 10 du classement, les patch notes et d\'autres informations'; ?>
 
-	<head>
-		<title></title>
-		<meta name="Description" content=""/>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
-		<link rel="Stylesheet" href="vue/polices.css" type="text/css">
-		<link rel="Stylesheet" href="vue/layout.css" type="text/css">
-		<!-- Remplir avec le bon css -->
-		<link rel="Stylesheet" href="vue/.css" type="text/css"> 
-		<link rel="Stylesheet" href="vue/bootstrap.min.css" type="text/css">
-	</head>
+<?php ob_start(); ?>
+	<p>HTML Compte</p>
+<?php $content = ob_get_clean(); ?>
 
-	<body class="accueil">
-
-	</body>
-</html>
+<?php include 'layout.inc.php'; ?>
