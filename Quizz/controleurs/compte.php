@@ -16,9 +16,6 @@
 		exit;
 	}
 
-	echo 'Désolé, une erreur est survenue.';
-	exit;
-
-
-	require 'vues/compte.php'
+	include 'vues/compte.php';
+	include 'vues/layout.inc.php';
 ?>

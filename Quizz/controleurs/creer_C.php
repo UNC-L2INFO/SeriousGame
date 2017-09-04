@@ -4,4 +4,6 @@
 
 	require 'vues/creer_C.php';
 
+	include 'vues/layout.inc.php';
+
 ?>

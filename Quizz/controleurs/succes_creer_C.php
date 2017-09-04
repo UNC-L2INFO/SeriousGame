@@ -9,7 +9,7 @@
 
 	/* Vérification champs vides */
 
-	if ( strlen($_POST['ndc']) == 0
+	/*if ( strlen($_POST['ndc']) == 0
 		OR strlen($_POST['mdp']) == 0
 		OR strlen($_POST['pseudo']) == 0
 		OR strlen($_POST['prenom']) == 0
@@ -24,7 +24,7 @@
 
 	/* Vérification pseudo */
 
-	$result = exist_idcompte_from_pseudo($_POST['pseudo']);
+	/*$result = exist_idcompte_from_pseudo($_POST['pseudo']);
 
 	if ( !$vide && ( !$result || mysqli_num_rows( $result ) != 0 ) )
 	{
@@ -34,7 +34,7 @@
 
 	/* Vérification NDC */
 
-	$result = exist_idcompte_from_ndc($_POST['ndc']);
+	/*$result = exist_idcompte_from_ndc($_POST['ndc']);
 
 	if ( !$vide && ( !$result || mysqli_num_rows( $result ) != 0 ) )
 	{
@@ -44,7 +44,7 @@
 
 	/* Vérification mot de passe */
 
-	if ( !$vide && strlen($_POST['mdp']) < 8)
+	/*if ( !$vide && strlen($_POST['mdp']) < 8)
 	{
 		echo 'Mot de passe trop court.<br/>';
 		$exit = true;
@@ -52,7 +52,7 @@
 
 	/* Vérification confirmation */
 
-	if ( $_POST['mdp'] != $_POST['mdp-confirm'] && !$vide)
+	/*if ( $_POST['mdp'] != $_POST['mdp-confirm'] && !$vide)
 	{
 		echo 'Confirmation du mot de passe incorrecte.<br/>';
 		$exit = true;
@@ -60,7 +60,7 @@
 
 	/* Vérification email */
 
-	$result = exist_idcompte_from_email($_POST['email']);
+	/*$result = exist_idcompte_from_email($_POST['email']);
 
 	if ( !$vide && ( !$result || mysqli_num_rows( $result ) != 0 ) )
 	{
@@ -70,7 +70,7 @@
 
 	/* Exit si erreur */
 
-	if ($exit == true) 
+	/*if ($exit == true) 
 	{
 		mysqli_free_result( $result );
 		header( "refresh:500;url=creer_C.php" );
@@ -87,5 +87,6 @@
 	$ID = get_idcompte_from_pseudo($_POST['pseudo']);
 	$_SESSION['ID'] = $ID['IDCompte'];
 
-	require 'vues/succes_creer_C.php'
+	include 'vues/succes_creer_C.php';
+	include 'vues/layout.inc.php';
 ?>
