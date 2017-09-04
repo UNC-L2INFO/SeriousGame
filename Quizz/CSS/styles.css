@@ -1,6 +1,7 @@
 /*main*/
 
 body{
+	z-index: 0;
 	background-image: url(../images/land.jpg);
 	background-position: center;
 	background-size: 100% 100%;
@@ -57,6 +58,7 @@ nav.menu-commun{
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 1000;
     top: 0;
     left: 0;
     border: none;
@@ -228,14 +230,14 @@ span.glyphicon.glyphicon-off{
 
 
 
-/* créer un compte */
+/* crÃ©er un compte */
 
 #section-creer-C {
 	padding-right: 20px;
 	padding-left: 20px;
 }
 
-/* défense */
+/* dÃ©fense */
 
 
 
@@ -264,51 +266,51 @@ a div{
 	height: 100vh;
 }
 
-a:nth-child(1) div{
+a:nth-child(2) div{
 	background-color: #3339ED;
 }
 
-a:nth-child(1):hover div{
+a:nth-child(2):hover div{
 	background-color: #2e33d4;
 }
 
-a:nth-child(2) div{
+a:nth-child(3) div{
 	background-color: #33EDED;
 }
 
-a:nth-child(2):hover div{
+a:nth-child(3):hover div{
 	background-color: #2ed4d4;
 }
 
-a:nth-child(3) div{
+a:nth-child(4) div{
 	background-color: #64ED33;
 }
 
-a:nth-child(3):hover div{
+a:nth-child(4):hover div{
 	background-color: #59d42e;
 }
 
-a:nth-child(4) div{
+a:nth-child(5) div{
 	background-color: #EDE133;
 }
 
-a:nth-child(4):hover div{
+a:nth-child(5):hover div{
 	background-color: #d4c92e;
 }
 
-a:nth-child(5) div{
+a:nth-child(6) div{
 	background-color: #ED9033;
 }
 
-a:nth-child(5):hover div{
+a:nth-child(6):hover div{
 	background-color: #d4812e;
 }
 
-a:nth-child(6) div{
+a:nth-child(7) div{
 	background-color: #ED3333;
 }
 
-a:nth-child(6):hover div{
+a:nth-child(7):hover div{
 	background-color: #d42e2e;
 }
 
