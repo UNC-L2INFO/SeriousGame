@@ -87,6 +87,8 @@
 	$ID = get_idcompte_from_pseudo($_POST['pseudo']);
 	$_SESSION['ID'] = $ID['IDCompte'];
 
-	include 'vues/succes_creer_C.php';
-	include 'vues/layout.inc.php';
+	include 'vues/creer_C.php';
+	include 'vues/inc.menu.php';
+	include 'vues/inc.flex.php';
+	include 'vues/inc.layout.php';
 ?>

@@ -1,6 +1,6 @@
-<?php  
+<?php 
 
-	require 'modeles/creer_C.php';
+	require 'modeles/accueil.php';
 
 	include 'vues/creer_C.php';
 	include 'vues/inc.menu.php';
