@@ -89,6 +89,7 @@ function get_distinct_theme()
 
 	mysqli_free_result($result);
 	close_database_connection($link);
+	return $theme;
 }
 
 function add_account($ndc, $mdp, $pseudo, $prenom, $nom, $email, $age)
