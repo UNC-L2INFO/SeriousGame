@@ -1,231 +1,404 @@
-/* Page Compte */
-.cadreAvatar{
-	/* Premier cadre/ligne de la page compte */
-	margin-top: 1%;
-	
-	font-size: 1.4em;
-	border: 2px solid black;
-	
-	background-color: rgb(135,185,228);
-}
-.cadreGC{
-	/* 2ème cadre/ligne de la page compte */
-	/* Pas de bord car composé de sous cadre */
-	margin-top: 1%;
-	font-size: 1.4em;
-}
-.cadreListeAmis{
-	/* sous cadre  de la 3ème ligne */
-	margin-top: 15px;
-	border: 2px solid black;
+/*main*/
 
-	height: 233px;
-	width: 650px;
-	/* Taille Fixe pour pouvoir aligner et gérer les bordures des cadres */
-	background-color: rgb(127,188,7);
+body{
+	background-image: url(../images/land.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+	background-attachment: fixed;
 }
 
-
-
-
-.soustitre{
-	/* Soustitre encadré mis dans des blocks */
-	margin-top: 5%;
-	border: 2px solid black;
-	background-color: rgb(94,218,209);
+.flex-body {
+	display: flex;
+	justify-content: center;
+	margin-top: 76px;
 }
 
-.asoustitre{
-	/* soutitre particulié: encadre un a besoin d'un placement différents */
-	margin-top: 20%;
-	border: 2px solid black;
-	background-color: rgb(94,218,209);
+.main-box {
+	display: flex;
+	flex-wrap: wrap;
+	width: 70%;
 }
 
-/* Partie Guilde */
-.align{
-	/* aligne les blocks*/
-	background-color: rgba(188,7,7,0.75);
-	border: 2px solid black;
-	width: 750px;
-}
-.cadreguilde{
-	border: 2px solid black;
-	font-size: 1.4em;
-	background-color: rgb(244,227,41);
-}
-.Nomguilde{
-	/* cadre à l'interieur d'un blocks */
-	/* Titre */
-	margin-top: 15px;
-	border: 2px solid black;
-
-	text-align: center;
-	font-size: 0.6em;
-	color:white;
-
-	background-color: rgba(188,7,7,0.75);
-}
-.descriptionGuilde{
-	/* cadre comprenant du texte */ 
-	height: 250px;
-	background-color: rgba(188,7,7,0.75);
-	color:white;
-}
-.niveauguilde{
-	/* cadre comprenant un chiffre */
-	margin-left: 88%;
-	/* positionnement plus a gauche */
-	font-size: 0.7em;
-	border: 2px solid black;
-	background-color: rgba(188,7,7,0.75);
-}
-/* Partie classement */
-.cadreclassement{
-	/* cadre gauche */
-	width: 300px;
-}
-.acadreclassement{
-	/* cadre droit */
-	margin-left: 0.5%;
-	width: 300px;
-	float: right;
-}
-.listeclassement{
-	/* cadre des 2 listes classement */
-	border: 2px solid black;
-	height: 304px;
-	background-color: rgb(244,227,41);
-}
-.cadreClassement{
-	/* encadre les 2 classements */
-	border: 2px solid black;
-	height: 362px;
-}
-.titreclassement{
-	/* encadre les titres de classement*/
-	margin-top: 15px;
-	border: 2px solid black;
-	text-align: center;
-	font-size: 0.6em;
-	background-color: rgb(244,227,41);
-}
-/* Partie Amis */
-.cadremessage{
-	/* cadre large */
-	margin-top: 15px;
-	border: 2px solid black;
-	float left;
-	height: 50px;
-	background-color: rgb(127,188,7);
+.column-box {
+	display: flex;
+	flex-direction: column;
 }
 
-/* Partie Lien: Bouton/recherche/parcourir */
-.multibouton{
-	/* cadre recherche, parcourir */
-	margin-top: 15px;
-	border: 2px solid black;
-
-	font-size: 1.4em;
-	text-align: center;
-	
-	background-color: rgb(159,13,151);
+.small-content {
+	flex:2 ;
 }
 
-.separation{
-	/* astuce wtf pour séparer des blocs bootstraps */
-	/* fonctionnement inconnu */
-	width: 10px;
+section {
+	flex: 1 100%;	
+	box-shadow: 1px 1px 8px 0px;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 20px;
 }
-/* Partie Question */
-.cadrequestion{
-	margin-top: 15px;
-	border: 2px solid black;
-	background-color: rgb(7,66,188);
+
+.justify-center {
+	justify-content: center;
 }
-.tquestion{
-	margin-left: 30%;
-	border-collapse: separate;
-	border-spacing: 30px 25px;
+
+.justify-around {
+	justify-content: space-around;
 }
-.reponse{
-	border: 2px solid black;
+
+.justify-between {
+	justify-content: space-between;
+}
+
+/* layout */
+
+nav.menu-commun{
+	margin-bottom: 30px;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+div.dropdown.bouton960px{
+	display: none;
+	margin: 20px;
+}
+
+div.bouton-co-deco > button.btn.btn-primary.dropdown-toggle{
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgb(236,159,11)
+}
+
+div.dropdown.orange-grey-style > button{
+	background-color: transparent;
+	border-color: rgb(236,159,11);
+	border-radius: 0;
+}
+
+div.dropdown.orange-grey-style.open > button{
+	background-color: rgb(236,159,11);
+	border-color: white;
+}
+
+div.dropdown > ul.dropdown-menu{
+	margin: 0;
+	border-color: white;
+	top: 32px;
+	border-radius: 0;
+	background-color: rgb(236,159,11);
+}
+
+div.dropdown.bouton-co-deco > ul.dropdown-menu{
+	top: 27px;
+}
+
+div.dropdown > ul.dropdown-menu > li > a{
+	color: white;
+}
+
+div.dropdown > ul.dropdown-menu > li:hover > a{
+	color: black;
+}
+
+ul.dropdown-menu .divider{
+	background-color: white;
+}
+
+span.glyphicon.glyphicon-th-large{
+	color: rgb(236,159,11);
+}
+
+div.dropdown.open span.glyphicon.glyphicon-th-large{
+	color: white;
+}
+
+ul.dropdown-menu.dropdown-menu-right{
+	right: 16px;
+}
+
+nav > a#logo{
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	color: orange;
+	font-family: "saucer_bbregular";
+	font-size: 40pt;
+	width: 120px;
+}
+
+ul.menu-nav{
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	padding-left: 7px;
+}
+
+li{
+	list-style: none;
+	margin-right: 20px;
+}
+
+li:nth-child(5){
+	margin-right: 7px;
+}
+
+li:hover{
+	background-color: white;
+}
+
+ul.dropdown-menu > li{
+	margin-right: 0;
+}
+
+.menu-nav button{
 	width: 100px;
-	background-color: white;
-		margin-left: 155px;
+	border-color: #c7801b;
+	background-color: #fd9c11;
 }
-.question{
-	margin-top: 30px;
-	margin-left: 10%;
-	background-color: white;
-	border: 2px solid black;
+
+.menu-nav button.btn-lg{
+	width: 150px;
+}
+
+button.btn.btn-primary.dropdown-toggle{
+	margin: 0;
+	padding: 3px;
+	background-color: transparent;
+	border-color: white;
+}
+
+div.dropdown{
+	display: inline-block;
+	width: 120px;
+}
+
+span.glyphicon.glyphicon-cog{
+	color: lightgreen;
+}
+
+span.glyphicon.glyphicon-off{
+	color: red;
+}
+
+@media screen and (max-width: 992px){
+	nav > a#logo , ul.menu-nav , div.dropdown{
+		display: none;
+	}
+
+	div.dropdown.bouton960px{
+		display: inline-block;
+	}
+}
+
+/* 1v1 */
+
+
+
+/* accueil */
+
+
+
+/* attaque */
+
+
+
+/* Bonus */
+
+
+
+/* compte */
+
+
+
+/* compte perso */
+
+
+
+/* compte publique */
+
+
+
+/* connecter */
+
+
+
+/* cr�er un compte */
+
+#section-creer-C {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+/* d�fense */
+
+
+
+/* events */
+
+
+
+/* guildes */
+
+
+
+/* GvG */
+
+
+
+/* jouer */
+
+h1.mode{
+	margin-top: 20vh;
+	font-family: "saucer_bbregular";
+	font-size: 3em;
+	color: black;
+}
+
+a div{
+	height: 100vh;
+}
+
+a:nth-child(1) div{
+	background-color: #3339ED;
+}
+
+a:nth-child(1):hover div{
+	background-color: #2e33d4;
+}
+
+a:nth-child(2) div{
+	background-color: #33EDED;
+}
+
+a:nth-child(2):hover div{
+	background-color: #2ed4d4;
+}
+
+a:nth-child(3) div{
+	background-color: #64ED33;
+}
+
+a:nth-child(3):hover div{
+	background-color: #59d42e;
+}
+
+a:nth-child(4) div{
+	background-color: #EDE133;
+}
+
+a:nth-child(4):hover div{
+	background-color: #d4c92e;
+}
+
+a:nth-child(5) div{
+	background-color: #ED9033;
+}
+
+a:nth-child(5):hover div{
+	background-color: #d4812e;
+}
+
+a:nth-child(6) div{
+	background-color: #ED3333;
+}
+
+a:nth-child(6):hover div{
+	background-color: #d42e2e;
+}
+
+form div label{
+	color: white;
+}
+
+@media screen and (max-width: 991px){
+	h1.mode{
+		margin-top: 0;
+		padding-top: 20vh;
+	}
+}
+
+/* ladder */
+
+
+
+/* layout */
+
+
+
+/* liste guildes */
+
+
+
+/* propositions admin */
+
+
+
+/* questions */
+
+
+
+/* solo */
+
+
+
+/* succes */
+
+
+
+/* succes connection */
+
+.h1-choix-theme {
+	text-align: center;
+}
+
+.section-choix-theme {
 	height: 100px;
-	width:900px;
-}
-.BQ{
-	background-color: white;
-	border: 2px solid black;
-}
-.espace{
-	margin-left: 35px;
-}
-.MG{
-	margin-top: 15px;
-}
-footer{
-	background-color: white;
-	height:50px;
-}
-/* Page Creation Compte */
-.cadrecreation{
-	margin-top: 30px;
-	border: 2px solid black;
-	color: white;
-	background-color: rgba(188,7,7,0.75);
+	-webkit-transition: height 2s;
+	transition: height 0.5s;
+	overflow: hidden;
 }
 
+.section-choix-theme:hover {
+	height: 40vh;
+}
 
-.creationcompte {
-    border-collapse: separate;
-    border-spacing: 5px 25px; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
+.description-choix-theme {
+	margin-left: 30px;
+	margin-right: 30px;
 }
-.cadreconnection{
-	margin-top: 30px;
-	padding-top: 60px;
-	border: 2px solid black;	
-	color: white;
-	background-color: rgb(7,66,188);
-	height: 300px;
+
+.section-choix-theme .description-choix-theme , .section-choix-theme .validation-choix-theme {
+	display: none;
 }
-.tconnection{
-	border-collapse: separate;
-	border-spacing: 30px 25px;
+
+.section-choix-theme:hover .description-choix-theme , .section-choix-theme:hover .validation-choix-theme {
+	display: inline-block;
 }
-.creerC{
-	padding-left: 75%;
-	color: white;
+
+/* couleurs */
+
+.color-lightblue {
+	background-color: rgb(54, 229, 221);
 }
-.bouton{
-	border: 2px solid black;
-	color: black;
-	background-color: white;
+
+.color-paleyellow {
+	background-color: rgb(255, 231, 171);
 }
-input{
-	width:250px;
-	height:30px;
-	margin-left: 60px;
-	margin-bottom: 40px;
-	border: 2px solid black;
-	color: black;
-	background-color: white;
+
+.color-green {
+	background-color: rgb(135, 228, 162);
 }
-.ndcentrer{
-	margin-left: 80px;
+
+.color-red {
+	background-color: rgb(215, 71, 60);
 }
-.boutonenvoyer{
-	margin-left: 9px;
-	width:100px;
-	border: 2px solid black;
-	color: black;
-	background-color: white;
+
+.color-orange {
+	background-color: rgb(233, 162, 41);
 }
