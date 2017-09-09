@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 01 Septembre 2017 à 07:46
+-- Généré le :  Sam 09 Septembre 2017 à 07:10
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  7.1.1
 
@@ -30,6 +30,26 @@ CREATE TABLE `adébloquessuccès` (
   `NomSuccès` varchar(20) NOT NULL,
   `IDCompte` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `adébloquésujet`
+--
+
+CREATE TABLE `adébloquésujet` (
+  `IDCompte` int(4) NOT NULL,
+  `NomSujet` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `adébloquésujet`
+--
+
+INSERT INTO `adébloquésujet` (`IDCompte`, `NomSujet`) VALUES
+(74, 'Géologie'),
+(74, 'Géométrie'),
+(74, 'Mathématiques');
 
 -- --------------------------------------------------------
 
@@ -160,15 +180,16 @@ CREATE TABLE `infocompte` (
   `PartiesPerduesAtt` int(6) DEFAULT NULL,
   `PartiesJouéesDeff` int(6) DEFAULT NULL,
   `PartiesPerduesDeff` int(6) DEFAULT NULL,
-  `Privilège` varchar(10) DEFAULT NULL
+  `Privilège` varchar(10) DEFAULT NULL,
+  `PointsSolo` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `infocompte`
 --
 
-INSERT INTO `infocompte` (`IDCompte`, `NDCCompte`, `MDPCompte`, `PseudoCompte`, `PrenomUtilisateur`, `NomUtilisateur`, `emailUtilisateur`, `AgeUtilisateur`, `PartiesJouéesAtt`, `PartiesPerduesAtt`, `PartiesJouéesDeff`, `PartiesPerduesDeff`, `Privilège`) VALUES
-(49, 'azerty63187', 'triso63187lol', 'Nykun', 'Anthony', 'Laude', 'laudeanthony98@gmail.com', 19, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `infocompte` (`IDCompte`, `NDCCompte`, `MDPCompte`, `PseudoCompte`, `PrenomUtilisateur`, `NomUtilisateur`, `emailUtilisateur`, `AgeUtilisateur`, `PartiesJouéesAtt`, `PartiesPerduesAtt`, `PartiesJouéesDeff`, `PartiesPerduesDeff`, `Privilège`, `PointsSolo`) VALUES
+(74, '', '', 'Nykun', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 50);
 
 -- --------------------------------------------------------
 
@@ -219,7 +240,7 @@ CREATE TABLE `possèdeavatar` (
 --
 
 INSERT INTO `possèdeavatar` (`IDCompte`, `NomAvatar`) VALUES
-(49, 'Avatar 2');
+(74, 'Avatar 3');
 
 -- --------------------------------------------------------
 
@@ -265,12 +286,39 @@ CREATE TABLE `question` (
   `NomThème` varchar(20) DEFAULT NULL,
   `NomSujet` varchar(20) DEFAULT NULL,
   `IDQuestion` int(4) NOT NULL,
-  `Question` varchar(50) DEFAULT NULL,
-  `bonnerep` varchar(20) DEFAULT NULL,
-  `mauvaiserep1` varchar(20) DEFAULT NULL,
-  `mauvaiserep2` varchar(20) DEFAULT NULL,
-  `mauvaiserep3` varchar(20) DEFAULT NULL
+  `Question` text,
+  `bonnerep` varchar(50) DEFAULT NULL,
+  `mauvaiserep1` varchar(50) DEFAULT NULL,
+  `mauvaiserep2` varchar(50) DEFAULT NULL,
+  `mauvaiserep3` varchar(50) DEFAULT NULL,
+  `NvQuestion` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `question`
+--
+
+INSERT INTO `question` (`NomThème`, `NomSujet`, `IDQuestion`, `Question`, `bonnerep`, `mauvaiserep1`, `mauvaiserep2`, `mauvaiserep3`, `NvQuestion`) VALUES
+('Sciences', 'Géométrie', 1, 'Question 1', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 2, 'Question 2', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 3, 'Question 3', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 4, 'Question 4', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 5, 'Question 5', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 6, 'Question 6', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 7, 'Question 7', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 8, 'Question 8', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 9, 'Question 9', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 10, 'Question 10', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3),
+('Sciences', 'Mathématiques', 11, 'Question 1', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 12, 'Question 2', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 13, 'Question 3', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 14, 'Question 4', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 15, 'Question 5', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 16, 'Question 6', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 17, 'Question 7', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Mathématiques', 18, 'Question 8', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Mathématiques', 19, 'Question 9', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Mathématiques', 20, 'Question 10', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3);
 
 -- --------------------------------------------------------
 
@@ -291,9 +339,21 @@ CREATE TABLE `succès` (
 
 CREATE TABLE `sujet` (
   `NomSujet` varchar(20) NOT NULL,
-  `DescriptionSujet` varchar(30) DEFAULT NULL,
+  `DescriptionSujet` text,
   `NomThème` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Contenu de la table `sujet`
+--
+
+INSERT INTO `sujet` (`NomSujet`, `DescriptionSujet`, `NomThème`) VALUES
+('Chimie', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\'a pas fait que survivre cinq siècles, mais s\'est aussi adapté à la bureautique informatique, sans que son contenu n\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.', 'Sciences'),
+('Géologie', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\'a pas fait que survivre cinq siècles, mais s\'est aussi adapté à la bureautique informatique, sans que son contenu n\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.', 'Sciences'),
+('Géométrie', 'Science des mathématiques étudiant des figures dans le plan et l\'espace.', 'Sciences'),
+('Mathématiques', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\'a pas fait que survivre cinq siècles, mais s\'est aussi adapté à la bureautique informatique, sans que son contenu n\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.', 'Sciences'),
+('Physique', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\'a pas fait que survivre cinq siècles, mais s\'est aussi adapté à la bureautique informatique, sans que son contenu n\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.', 'Sciences'),
+('SVT', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\'a pas fait que survivre cinq siècles, mais s\'est aussi adapté à la bureautique informatique, sans que son contenu n\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.', 'Sciences');
 
 -- --------------------------------------------------------
 
@@ -312,23 +372,11 @@ CREATE TABLE `tchat` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `thème`
---
-
-CREATE TABLE `thème` (
-  `NomThème` varchar(16) NOT NULL,
-  `Description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `thèmequestion`
 --
 
 CREATE TABLE `thèmequestion` (
   `NomThème` varchar(20) NOT NULL,
-  `IDQuestion` int(4) DEFAULT NULL,
   `DescriptionSujet` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -336,10 +384,10 @@ CREATE TABLE `thèmequestion` (
 -- Contenu de la table `thèmequestion`
 --
 
-INSERT INTO `thèmequestion` (`NomThème`, `IDQuestion`, `DescriptionSujet`) VALUES
-('Arts', NULL, 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\\\'imprimerie depuis les années 1500, \r\n									quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\\\'a pas fait que survivre cinq siècles, mais s\\\'est aussi adapté à la bureautique \r\n									informatique, sans que son contenu n\\\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, \r\n									par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. 1'),
-('Littérature', NULL, 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\\\'imprimerie depuis les années 1500, \r\n									quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\\\'a pas fait que survivre cinq siècles, mais s\\\'est aussi adapté à la bureautique \r\n									informatique, sans que son contenu n\\\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, \r\n									par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. 2'),
-('Sciences', NULL, 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\\\'imprimerie depuis les années 1500, \r\n									quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\\\'a pas fait que survivre cinq siècles, mais s\\\'est aussi adapté à la bureautique \r\n									informatique, sans que son contenu n\\\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, \r\n									par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. 3');
+INSERT INTO `thèmequestion` (`NomThème`, `DescriptionSujet`) VALUES
+('Arts', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\\\'imprimerie depuis les années 1500, \r\n									quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\\\'a pas fait que survivre cinq siècles, mais s\\\'est aussi adapté à la bureautique \r\n									informatique, sans que son contenu n\\\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, \r\n									par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. 1'),
+('Littérature', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\\\'imprimerie depuis les années 1500, \r\n									quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\\\'a pas fait que survivre cinq siècles, mais s\\\'est aussi adapté à la bureautique \r\n									informatique, sans que son contenu n\\\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, \r\n									par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. 2'),
+('Sciences', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\\\'imprimerie depuis les années 1500, \r\n									quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\\\'a pas fait que survivre cinq siècles, mais s\\\'est aussi adapté à la bureautique \r\n									informatique, sans que son contenu n\\\'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, \r\n									par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. 3');
 
 --
 -- Index pour les tables exportées
@@ -351,6 +399,13 @@ INSERT INTO `thèmequestion` (`NomThème`, `IDQuestion`, `DescriptionSujet`) VAL
 ALTER TABLE `adébloquessuccès`
   ADD PRIMARY KEY (`NomSuccès`,`IDCompte`),
   ADD KEY `IDCompte` (`IDCompte`);
+
+--
+-- Index pour la table `adébloquésujet`
+--
+ALTER TABLE `adébloquésujet`
+  ADD PRIMARY KEY (`IDCompte`,`NomSujet`),
+  ADD KEY `adébloquésujet_ibfk2` (`NomSujet`);
 
 --
 -- Index pour la table `appartientguilde`
@@ -485,17 +540,10 @@ ALTER TABLE `tchat`
   ADD KEY `IDDestinataire` (`IDDestinataire`);
 
 --
--- Index pour la table `thème`
---
-ALTER TABLE `thème`
-  ADD PRIMARY KEY (`NomThème`);
-
---
 -- Index pour la table `thèmequestion`
 --
 ALTER TABLE `thèmequestion`
-  ADD PRIMARY KEY (`NomThème`),
-  ADD KEY `IDQuestion` (`IDQuestion`);
+  ADD PRIMARY KEY (`NomThème`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -505,7 +553,12 @@ ALTER TABLE `thèmequestion`
 -- AUTO_INCREMENT pour la table `infocompte`
 --
 ALTER TABLE `infocompte`
-  MODIFY `IDCompte` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `IDCompte` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+--
+-- AUTO_INCREMENT pour la table `question`
+--
+ALTER TABLE `question`
+  MODIFY `IDQuestion` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- Contraintes pour les tables exportées
 --
@@ -516,6 +569,13 @@ ALTER TABLE `infocompte`
 ALTER TABLE `adébloquessuccès`
   ADD CONSTRAINT `adébloquessuccès_ibfk_1` FOREIGN KEY (`NomSuccès`) REFERENCES `succès` (`NomSuccès`),
   ADD CONSTRAINT `adébloquessuccès_ibfk_2` FOREIGN KEY (`IDCompte`) REFERENCES `infocompte` (`IDCompte`);
+
+--
+-- Contraintes pour la table `adébloquésujet`
+--
+ALTER TABLE `adébloquésujet`
+  ADD CONSTRAINT `adébloquésujet_ibfk1` FOREIGN KEY (`IDCompte`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `adébloquésujet_ibfk2` FOREIGN KEY (`NomSujet`) REFERENCES `sujet` (`NomSujet`);
 
 --
 -- Contraintes pour la table `appartientguilde`
@@ -534,7 +594,7 @@ ALTER TABLE `associéavatar`
 -- Contraintes pour la table `banquedequestion`
 --
 ALTER TABLE `banquedequestion`
-  ADD CONSTRAINT `banquedequestion_ibfk_1` FOREIGN KEY (`IDQuestion`) REFERENCES `question` (`IDQuestion`);
+  ADD CONSTRAINT `banquedequestion_ibfk` FOREIGN KEY (`IDQuestion`) REFERENCES `question` (`IDQuestion`);
 
 --
 -- Contraintes pour la table `demandeamis`
@@ -614,7 +674,7 @@ ALTER TABLE `question`
 -- Contraintes pour la table `sujet`
 --
 ALTER TABLE `sujet`
-  ADD CONSTRAINT `possèdeavatar_ibfk` FOREIGN KEY (`NomThème`) REFERENCES `thème` (`NomThème`);
+  ADD CONSTRAINT `possèdeavatar_ibfk` FOREIGN KEY (`NomThème`) REFERENCES `thèmequestion` (`NomThème`);
 
 --
 -- Contraintes pour la table `tchat`
@@ -622,12 +682,6 @@ ALTER TABLE `sujet`
 ALTER TABLE `tchat`
   ADD CONSTRAINT `tchat_ibfk_1` FOREIGN KEY (`IDCompte`) REFERENCES `infocompte` (`IDCompte`),
   ADD CONSTRAINT `tchat_ibfk_2` FOREIGN KEY (`IDDestinataire`) REFERENCES `infocompte` (`IDCompte`);
-
---
--- Contraintes pour la table `thèmequestion`
---
-ALTER TABLE `thèmequestion`
-  ADD CONSTRAINT `thèmequestion_ibfk_1` FOREIGN KEY (`IDQuestion`) REFERENCES `question` (`IDQuestion`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
