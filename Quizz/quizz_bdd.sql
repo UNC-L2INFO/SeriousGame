@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 09 Septembre 2017 à 07:10
+-- Généré le :  Jeu 14 Septembre 2017 à 10:24
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  7.1.1
 
@@ -92,6 +92,22 @@ CREATE TABLE `banquedequestion` (
   `IDCompte` int(4) NOT NULL,
   `IDQuestion` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `banquedequestion`
+--
+
+INSERT INTO `banquedequestion` (`IDCompte`, `IDQuestion`) VALUES
+(77, 1),
+(77, 3),
+(77, 4),
+(77, 5),
+(77, 21),
+(77, 22),
+(77, 23),
+(77, 24),
+(77, 29),
+(77, 31);
 
 -- --------------------------------------------------------
 
@@ -189,7 +205,10 @@ CREATE TABLE `infocompte` (
 --
 
 INSERT INTO `infocompte` (`IDCompte`, `NDCCompte`, `MDPCompte`, `PseudoCompte`, `PrenomUtilisateur`, `NomUtilisateur`, `emailUtilisateur`, `AgeUtilisateur`, `PartiesJouéesAtt`, `PartiesPerduesAtt`, `PartiesJouéesDeff`, `PartiesPerduesDeff`, `Privilège`, `PointsSolo`) VALUES
-(74, '', '', 'Nykun', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 50);
+(74, '', '', 'Nykun', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 50),
+(75, 'sfhdsfh', '123456789', 'lol', 'qsdfsdfgdfhfdj', 'gsdfgdfghdty', 'qsdfsfhdfghudfd', 19, NULL, NULL, NULL, NULL, NULL, 0),
+(76, '', '', 'xD', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0),
+(77, '', '', 'dbarres', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -240,7 +259,8 @@ CREATE TABLE `possèdeavatar` (
 --
 
 INSERT INTO `possèdeavatar` (`IDCompte`, `NomAvatar`) VALUES
-(74, 'Avatar 3');
+(74, 'Avatar 3'),
+(77, 'Avatar 3');
 
 -- --------------------------------------------------------
 
@@ -309,16 +329,36 @@ INSERT INTO `question` (`NomThème`, `NomSujet`, `IDQuestion`, `Question`, `bonn
 ('Sciences', 'Géométrie', 8, 'Question 8', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
 ('Sciences', 'Géométrie', 9, 'Question 9', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
 ('Sciences', 'Géométrie', 10, 'Question 10', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3),
-('Sciences', 'Mathématiques', 11, 'Question 1', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
-('Sciences', 'Mathématiques', 12, 'Question 2', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
-('Sciences', 'Mathématiques', 13, 'Question 3', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
-('Sciences', 'Mathématiques', 14, 'Question 4', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
-('Sciences', 'Mathématiques', 15, 'Question 5', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
-('Sciences', 'Mathématiques', 16, 'Question 6', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
-('Sciences', 'Mathématiques', 17, 'Question 7', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
-('Sciences', 'Mathématiques', 18, 'Question 8', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
-('Sciences', 'Mathématiques', 19, 'Question 9', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
-('Sciences', 'Mathématiques', 20, 'Question 10', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3);
+('Sciences', 'Mathématiques', 11, 'Question 11', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 12, 'Question 12', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 13, 'Question 13', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 14, 'Question 14', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 15, 'Question 15', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 16, 'Question 16', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Mathématiques', 17, 'Question 17', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Mathématiques', 18, 'Question 18', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Mathématiques', 19, 'Question 19', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Mathématiques', 20, 'Question 20', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3),
+('Sciences', 'Géométrie', 21, 'Question 1', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 22, 'Question 2', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 23, 'Question 3', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 24, 'Question 4', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 25, 'Question 5', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 26, 'Question 6', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 27, 'Question 7', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 28, 'Question 8', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 29, 'Question 9', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 30, 'Question 10', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3),
+('Sciences', 'Géométrie', 31, 'Question 1', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 32, 'Question 2', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 33, 'Question 3', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 34, 'Question 4', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 35, 'Question 5', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 1),
+('Sciences', 'Géométrie', 36, 'Question 6', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 37, 'Question 7', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 38, 'Question 8', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 39, 'Question 9', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 2),
+('Sciences', 'Géométrie', 40, 'Question 10', 'Bonne réponse', 'Mauvaise réponse 1', 'Mauvaise réponse 2', 'Mauvaise réponse 3', 3);
 
 -- --------------------------------------------------------
 
@@ -553,12 +593,12 @@ ALTER TABLE `thèmequestion`
 -- AUTO_INCREMENT pour la table `infocompte`
 --
 ALTER TABLE `infocompte`
-  MODIFY `IDCompte` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `IDCompte` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 --
 -- AUTO_INCREMENT pour la table `question`
 --
 ALTER TABLE `question`
-  MODIFY `IDQuestion` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDQuestion` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- Contraintes pour les tables exportées
 --
@@ -686,3 +726,4 @@ ALTER TABLE `tchat`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
