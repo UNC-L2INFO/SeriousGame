@@ -1,72 +1,52 @@
-<!doctype html>
-<html lang="fr">
-	<head>
-		<!-- Remplir le titre -->
-		<title>Jouer</title>
-		<!-- Remplir la description -->
-		<meta name="Description" content="Page jouer, acces aux modes de jeu"/>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
-		<link rel="Stylesheet" href="../CSS/polices.css" type="text/css">
-		<link rel="Stylesheet" href="../CSS/layout.css" type="text/css">
-		<link rel="Stylesheet" href="../CSS/bootstrap.min.css" type="text/css">
-		<script src="../js/jquery-1.11.2.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
-		<script src="../js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-		<!-- Remplir avec le bon css -->
-		<link rel="Stylesheet" href="../CSS/jouer.css" type="text/css">
-	</head>
+<?php $title = 'Accueil'; ?>
+<?php $desc = 'Page d\'accueil affichant les news, le top 10 du classement, les patch notes et d\'autres informations'; ?>
 
-	<body class="container-fluid">
-		<div class="row">
-			<a href="#">
-				<div class="col-md-2 text-center">
-					<h1 class="mode" style="text-decoration: none;">
-						D<br/>E<br/>F<br/>E<br/>N<br/>S<br/>E
-					</h1>		
-				</div>
-			</a>
-
-			<a href="#">
-				<div class="col-md-2 text-center">
-					<h1 class="mode" style="text-decoration: none;">
-						A<br/>T<br/>T<br/>A<br/>Q<br/>U<br/>E
-					</h1>		
-				</div>
-			</a>
-
-			<a href="#">
-				<div class="col-md-2 text-center">
-					<h1 class="mode" style="text-decoration: none;">
-						C<br/>A<br/>M<br/>P<br/>A<br/>G<br/>N<br/>E
-					</h1>		
-				</div>
-			</a>
-
-			<a href="#">
-				<div class="col-md-2 text-center">
-					<h1 class="mode" style="text-decoration: none;">
-						A<br/>R<br/>E<br/>N<br/>E
-					</h1>		
-				</div>
-			</a>
-
-			<a href="#">
-				<div class="col-md-2 text-center">
-					<h1 class="mode" style="text-decoration: none;">
-						G<br/>v<br/>G
-					</h1>
-				</div>
-			</a>
-
-			<a href="#">
-				<div class="col-md-2 text-center">
-					<h1 class="mode" style="text-decoration: none;">
-						E<br/>V<br/>E<br/>N<br/>T
-					</h1>
-				</div>
-			</a>
+<?php ob_start(); ?>
+	<a href="#">
+		<div class="col-md-2 text-center">
+			<h1 class="mode" style="text-decoration: none;">
+				D<br/>E<br/>F<br/>E<br/>N<br/>S<br/>E
+			</h1>		
 		</div>
+	</a>
 
-		<?php require 'layout.inc.php'; ?>
-	</body>
-</html>
+	<a href="#">
+		<div class="col-md-2 text-center">
+			<h1 class="mode" style="text-decoration: none;">
+				A<br/>T<br/>T<br/>A<br/>Q<br/>U<br/>E
+			</h1>		
+		</div>
+	</a>
+
+	<a href="./?page=solo_choix_sujet">
+		<div class="col-md-2 text-center">
+			<h1 class="mode" style="text-decoration: none;">
+				C<br/>A<br/>M<br/>P<br/>A<br/>G<br/>N<br/>E
+			</h1>
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="col-md-2 text-center">
+			<h1 class="mode" style="text-decoration: none;">
+				A<br/>R<br/>E<br/>N<br/>E
+			</h1>		
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="col-md-2 text-center">
+			<h1 class="mode" style="text-decoration: none;">
+				G<br/>v<br/>G
+			</h1>
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="col-md-2 text-center">
+			<h1 class="mode" style="text-decoration: none;">
+				E<br/>V<br/>E<br/>N<br/>T
+			</h1>
+		</div>
+	</a>
+<?php $content = ob_get_clean(); ?>
