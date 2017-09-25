@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 14 Septembre 2017 à 10:24
+-- Généré le :  Lun 25 Septembre 2017 à 03:48
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  7.1.1
 
@@ -49,7 +49,9 @@ CREATE TABLE `adébloquésujet` (
 INSERT INTO `adébloquésujet` (`IDCompte`, `NomSujet`) VALUES
 (74, 'Géologie'),
 (74, 'Géométrie'),
-(74, 'Mathématiques');
+(74, 'Mathématiques'),
+(106, 'Géométrie'),
+(107, 'Géométrie');
 
 -- --------------------------------------------------------
 
@@ -98,16 +100,273 @@ CREATE TABLE `banquedequestion` (
 --
 
 INSERT INTO `banquedequestion` (`IDCompte`, `IDQuestion`) VALUES
-(77, 1),
-(77, 3),
-(77, 4),
-(77, 5),
-(77, 21),
-(77, 22),
-(77, 23),
-(77, 24),
-(77, 29),
-(77, 31);
+(74, 1),
+(74, 2),
+(74, 3),
+(74, 4),
+(74, 5),
+(74, 6),
+(74, 7),
+(74, 8),
+(74, 9),
+(74, 10),
+(74, 21),
+(74, 22),
+(74, 23),
+(74, 24),
+(74, 25),
+(74, 26),
+(74, 27),
+(74, 31),
+(74, 34),
+(74, 35),
+(83, 1),
+(83, 2),
+(83, 3),
+(83, 4),
+(83, 5),
+(83, 6),
+(83, 7),
+(83, 8),
+(83, 9),
+(83, 10),
+(84, 1),
+(84, 2),
+(84, 3),
+(84, 4),
+(84, 5),
+(84, 6),
+(84, 7),
+(84, 8),
+(84, 9),
+(84, 10),
+(85, 1),
+(85, 2),
+(85, 3),
+(85, 4),
+(85, 5),
+(85, 6),
+(85, 7),
+(85, 8),
+(85, 9),
+(85, 10),
+(86, 1),
+(86, 2),
+(86, 3),
+(86, 4),
+(86, 5),
+(86, 6),
+(86, 7),
+(86, 8),
+(86, 9),
+(86, 10),
+(87, 1),
+(87, 2),
+(87, 3),
+(87, 4),
+(87, 5),
+(87, 6),
+(87, 7),
+(87, 8),
+(87, 9),
+(87, 10),
+(88, 1),
+(88, 2),
+(88, 3),
+(88, 4),
+(88, 5),
+(88, 6),
+(88, 7),
+(88, 8),
+(88, 9),
+(88, 10),
+(89, 1),
+(89, 2),
+(89, 3),
+(89, 4),
+(89, 5),
+(89, 6),
+(89, 7),
+(89, 8),
+(89, 9),
+(89, 10),
+(90, 1),
+(90, 2),
+(90, 3),
+(90, 4),
+(90, 5),
+(90, 6),
+(90, 7),
+(90, 8),
+(90, 9),
+(90, 10),
+(91, 1),
+(91, 2),
+(91, 3),
+(91, 4),
+(91, 5),
+(91, 6),
+(91, 7),
+(91, 8),
+(91, 9),
+(91, 10),
+(92, 1),
+(92, 2),
+(92, 3),
+(92, 4),
+(92, 5),
+(92, 6),
+(92, 7),
+(92, 8),
+(92, 9),
+(92, 10),
+(93, 1),
+(93, 2),
+(93, 3),
+(93, 4),
+(93, 5),
+(93, 6),
+(93, 7),
+(93, 8),
+(93, 9),
+(93, 10),
+(94, 1),
+(94, 2),
+(94, 3),
+(94, 4),
+(94, 5),
+(94, 6),
+(94, 7),
+(94, 8),
+(94, 9),
+(94, 10),
+(95, 1),
+(95, 2),
+(95, 3),
+(95, 4),
+(95, 5),
+(95, 6),
+(95, 7),
+(95, 8),
+(95, 9),
+(95, 10),
+(96, 1),
+(96, 2),
+(96, 3),
+(96, 4),
+(96, 5),
+(96, 6),
+(96, 7),
+(96, 8),
+(96, 9),
+(96, 10),
+(97, 1),
+(97, 2),
+(97, 3),
+(97, 4),
+(97, 5),
+(97, 6),
+(97, 7),
+(97, 8),
+(97, 9),
+(97, 10),
+(98, 1),
+(98, 2),
+(98, 3),
+(98, 4),
+(98, 5),
+(98, 6),
+(98, 7),
+(98, 8),
+(98, 9),
+(98, 10),
+(99, 1),
+(99, 2),
+(99, 3),
+(99, 4),
+(99, 5),
+(99, 6),
+(99, 7),
+(99, 8),
+(99, 9),
+(99, 10),
+(100, 1),
+(100, 2),
+(100, 3),
+(100, 4),
+(100, 5),
+(100, 6),
+(100, 7),
+(100, 8),
+(100, 9),
+(100, 10),
+(101, 1),
+(101, 2),
+(101, 3),
+(101, 4),
+(101, 5),
+(101, 6),
+(101, 7),
+(101, 8),
+(101, 9),
+(101, 10),
+(102, 1),
+(102, 2),
+(102, 3),
+(102, 4),
+(102, 5),
+(102, 6),
+(102, 7),
+(102, 8),
+(102, 9),
+(102, 10),
+(103, 1),
+(103, 2),
+(103, 3),
+(103, 4),
+(103, 5),
+(103, 6),
+(103, 7),
+(103, 8),
+(103, 9),
+(103, 10),
+(104, 1),
+(104, 2),
+(104, 3),
+(104, 4),
+(104, 5),
+(104, 6),
+(104, 7),
+(104, 8),
+(104, 9),
+(104, 10),
+(107, 1),
+(107, 2),
+(107, 3),
+(107, 4),
+(107, 5),
+(107, 6),
+(107, 7),
+(107, 9),
+(107, 21),
+(107, 22),
+(107, 23),
+(107, 24),
+(107, 25),
+(107, 26),
+(107, 27),
+(107, 28),
+(107, 29),
+(107, 30),
+(107, 31),
+(107, 32),
+(107, 33),
+(107, 34),
+(107, 35),
+(107, 36),
+(107, 37),
+(107, 38),
+(107, 40);
 
 -- --------------------------------------------------------
 
@@ -145,6 +404,68 @@ CREATE TABLE `demandeguilde` (
   `MessageDemandeGuilde` varchar(40) DEFAULT NULL,
   `DateDemandeGuilde` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `défensequotidienne`
+--
+
+CREATE TABLE `défensequotidienne` (
+  `IDCompte` int(4) NOT NULL,
+  `D1` int(4) DEFAULT NULL,
+  `D2` int(4) DEFAULT NULL,
+  `D3` int(4) DEFAULT NULL,
+  `D4` int(4) DEFAULT NULL,
+  `D5` int(4) DEFAULT NULL,
+  `D6` int(4) DEFAULT NULL,
+  `D7` int(4) DEFAULT NULL,
+  `D8` int(4) DEFAULT NULL,
+  `D9` int(4) DEFAULT NULL,
+  `D10` int(4) DEFAULT NULL,
+  `D11` int(4) DEFAULT NULL,
+  `D12` int(4) DEFAULT NULL,
+  `D13` int(4) DEFAULT NULL,
+  `D14` int(4) DEFAULT NULL,
+  `D15` int(4) DEFAULT NULL,
+  `D16` int(4) DEFAULT NULL,
+  `D17` int(4) DEFAULT NULL,
+  `D18` int(4) DEFAULT NULL,
+  `D19` int(4) DEFAULT NULL,
+  `D20` int(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `défensequotidienne`
+--
+
+INSERT INTO `défensequotidienne` (`IDCompte`, `D1`, `D2`, `D3`, `D4`, `D5`, `D6`, `D7`, `D8`, `D9`, `D10`, `D11`, `D12`, `D13`, `D14`, `D15`, `D16`, `D17`, `D18`, `D19`, `D20`) VALUES
+(74, 87, 95, 98, 102, 89, 94, 83, 100, 90, 85, 99, 97, 101, 103, 88, 74, 93, 86, 84, 104),
+(83, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(84, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(85, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(86, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(87, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(88, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(89, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(90, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(91, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(92, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(93, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(94, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(95, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(96, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(97, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(98, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(99, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(101, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(102, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(103, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(104, 83, 93, 87, 89, 97, 101, 96, 88, 92, 86, 94, 84, 74, 90, 103, 95, 102, 91, 98, 104),
+(105, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(106, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(107, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -188,6 +509,7 @@ CREATE TABLE `infocompte` (
   `NDCCompte` varchar(16) DEFAULT NULL,
   `MDPCompte` varchar(16) DEFAULT NULL,
   `PseudoCompte` varchar(16) DEFAULT NULL,
+  `TitreCompte` varchar(50) NOT NULL DEFAULT 'Initié',
   `PrenomUtilisateur` varchar(16) DEFAULT NULL,
   `NomUtilisateur` varchar(16) DEFAULT NULL,
   `emailUtilisateur` varchar(30) DEFAULT NULL,
@@ -197,18 +519,51 @@ CREATE TABLE `infocompte` (
   `PartiesJouéesDeff` int(6) DEFAULT NULL,
   `PartiesPerduesDeff` int(6) DEFAULT NULL,
   `Privilège` varchar(10) DEFAULT NULL,
-  `PointsSolo` int(10) NOT NULL
+  `PointsSolo` int(10) NOT NULL,
+  `PointsMulti` int(10) NOT NULL,
+  `Q1` int(4) DEFAULT NULL,
+  `Q2` int(4) DEFAULT NULL,
+  `Q3` int(4) DEFAULT NULL,
+  `Q4` int(4) DEFAULT NULL,
+  `Q5` int(4) DEFAULT NULL,
+  `Q6` int(4) DEFAULT NULL,
+  `Q7` int(4) DEFAULT NULL,
+  `Q8` int(4) DEFAULT NULL,
+  `Q9` int(4) DEFAULT NULL,
+  `Q10` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `infocompte`
 --
 
-INSERT INTO `infocompte` (`IDCompte`, `NDCCompte`, `MDPCompte`, `PseudoCompte`, `PrenomUtilisateur`, `NomUtilisateur`, `emailUtilisateur`, `AgeUtilisateur`, `PartiesJouéesAtt`, `PartiesPerduesAtt`, `PartiesJouéesDeff`, `PartiesPerduesDeff`, `Privilège`, `PointsSolo`) VALUES
-(74, '', '', 'Nykun', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 50),
-(75, 'sfhdsfh', '123456789', 'lol', 'qsdfsdfgdfhfdj', 'gsdfgdfghdty', 'qsdfsfhdfghudfd', 19, NULL, NULL, NULL, NULL, NULL, 0),
-(76, '', '', 'xD', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0),
-(77, '', '', 'dbarres', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0);
+INSERT INTO `infocompte` (`IDCompte`, `NDCCompte`, `MDPCompte`, `PseudoCompte`, `TitreCompte`, `PrenomUtilisateur`, `NomUtilisateur`, `emailUtilisateur`, `AgeUtilisateur`, `PartiesJouéesAtt`, `PartiesPerduesAtt`, `PartiesJouéesDeff`, `PartiesPerduesDeff`, `Privilège`, `PointsSolo`, `PointsMulti`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`, `Q6`, `Q7`, `Q8`, `Q9`, `Q10`) VALUES
+(74, '', '', 'Nykun', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 479, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(83, '', '', 'qdrgsdfghjdfhj', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(84, '', '', 'dsghyfdhjfggsrfd', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(85, '', '', 'dgdfgjhsrtge', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(86, '', '', 'ghyjyudtysertrt', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(87, '', '', 'fdghfghjcvxfdgs', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(88, '', '', 'xfghgfhjfdtghsrt', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(89, '', '', 'hjkghjkhglhngh', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(90, '', '', 'uiiouiophjkbvjn,', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(91, '', '', 'sgtfsfferhjjgj', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(92, '', '', 'reterze45', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(93, '', '', 'dfgdfgkhjlm456', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(94, '', '', 'gfhjfdghxdgfcvgh', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(95, '', '', 'k,jjkghdgdf', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(96, '', '', '456785645bdfgdfg', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(97, '', '', '4545641fgrtrhgjh', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(98, '', '', 'dfghfghjgfjbvn', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(99, '', '', 'tertetdfg', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(100, '', '', 'cfhjhgkjblk', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(101, '', '', 'desrtxfdghcfgjh', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(102, '', '', 'xdfghcvhjvbk', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(103, '', '', 'zerzrzrfdgdgh', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(104, '', '', 'vghkighjl', '', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+(105, '', '', 'vb,djl', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(106, '', '', 'fghgkhj', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(107, '', '', 'dfgdfgj', 'Initié', '', '', '', 0, NULL, NULL, NULL, NULL, NULL, 1991, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -260,7 +615,28 @@ CREATE TABLE `possèdeavatar` (
 
 INSERT INTO `possèdeavatar` (`IDCompte`, `NomAvatar`) VALUES
 (74, 'Avatar 3'),
-(77, 'Avatar 3');
+(83, 'Avatar 3'),
+(85, 'Avatar 3'),
+(86, 'Avatar 3'),
+(87, 'Avatar 3'),
+(88, 'Avatar 3'),
+(89, 'Avatar 3'),
+(91, 'Avatar 3'),
+(92, 'Avatar 3'),
+(93, 'Avatar 3'),
+(95, 'Avatar 3'),
+(96, 'Avatar 3'),
+(97, 'Avatar 3'),
+(98, 'Avatar 3'),
+(99, 'Avatar 3'),
+(100, 'Avatar 3'),
+(101, 'Avatar 3'),
+(102, 'Avatar 3'),
+(103, 'Avatar 3'),
+(104, 'Avatar 3'),
+(105, 'Avatar 3'),
+(106, 'Avatar 3'),
+(107, 'Avatar 3');
 
 -- --------------------------------------------------------
 
@@ -489,6 +865,32 @@ ALTER TABLE `demandeguilde`
   ADD KEY `IDGuilde` (`IDGuilde`);
 
 --
+-- Index pour la table `défensequotidienne`
+--
+ALTER TABLE `défensequotidienne`
+  ADD PRIMARY KEY (`IDCompte`),
+  ADD KEY `défensequotidienne_ibfk_1` (`D1`),
+  ADD KEY `défensequotidienne_ibfk_2` (`D2`),
+  ADD KEY `défensequotidienne_ibfk_3` (`D3`),
+  ADD KEY `défensequotidienne_ibfk_4` (`D4`),
+  ADD KEY `défensequotidienne_ibfk_5` (`D5`),
+  ADD KEY `défensequotidienne_ibfk_6` (`D6`),
+  ADD KEY `défensequotidienne_ibfk_7` (`D7`),
+  ADD KEY `défensequotidienne_ibfk_8` (`D8`),
+  ADD KEY `défensequotidienne_ibfk_9` (`D9`),
+  ADD KEY `défensequotidienne_ibfk_10` (`D10`),
+  ADD KEY `défensequotidienne_ibfk_11` (`D11`),
+  ADD KEY `défensequotidienne_ibfk_12` (`D12`),
+  ADD KEY `défensequotidienne_ibfk_13` (`D13`),
+  ADD KEY `défensequotidienne_ibfk_14` (`D14`),
+  ADD KEY `défensequotidienne_ibfk_15` (`D15`),
+  ADD KEY `défensequotidienne_ibfk_16` (`D16`),
+  ADD KEY `défensequotidienne_ibfk_17` (`D17`),
+  ADD KEY `défensequotidienne_ibfk_18` (`D18`),
+  ADD KEY `défensequotidienne_ibfk_19` (`D19`),
+  ADD KEY `défensequotidienne_ibfk_20` (`D20`);
+
+--
 -- Index pour la table `guilde`
 --
 ALTER TABLE `guilde`
@@ -506,7 +908,17 @@ ALTER TABLE `guildevguilde`
 -- Index pour la table `infocompte`
 --
 ALTER TABLE `infocompte`
-  ADD PRIMARY KEY (`IDCompte`);
+  ADD PRIMARY KEY (`IDCompte`),
+  ADD KEY `infocompte_ibfk_2` (`IDCompte`,`Q2`),
+  ADD KEY `infocompte_ibfk_3` (`IDCompte`,`Q3`),
+  ADD KEY `infocompte_ibfk_4` (`IDCompte`,`Q4`),
+  ADD KEY `infocompte_ibfk_5` (`IDCompte`,`Q5`),
+  ADD KEY `infocompte_ibfk_6` (`IDCompte`,`Q6`),
+  ADD KEY `infocompte_ibfk_7` (`IDCompte`,`Q7`),
+  ADD KEY `infocompte_ibfk_8` (`IDCompte`,`Q8`),
+  ADD KEY `infocompte_ibfk_9` (`IDCompte`,`Q9`),
+  ADD KEY `infocompte_ibfk_10` (`IDCompte`,`Q10`),
+  ADD KEY `infocompte_ibfk_1` (`IDCompte`,`Q1`);
 
 --
 -- Index pour la table `ladder`
@@ -593,7 +1005,7 @@ ALTER TABLE `thèmequestion`
 -- AUTO_INCREMENT pour la table `infocompte`
 --
 ALTER TABLE `infocompte`
-  MODIFY `IDCompte` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `IDCompte` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 --
 -- AUTO_INCREMENT pour la table `question`
 --
@@ -651,6 +1063,32 @@ ALTER TABLE `demandeguilde`
   ADD CONSTRAINT `demandeguilde_ibfk_2` FOREIGN KEY (`IDGuilde`) REFERENCES `guilde` (`IDGuilde`);
 
 --
+-- Contraintes pour la table `défensequotidienne`
+--
+ALTER TABLE `défensequotidienne`
+  ADD CONSTRAINT `défensequotidienne_ibfk_1` FOREIGN KEY (`D1`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_10` FOREIGN KEY (`D10`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_11` FOREIGN KEY (`D11`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_12` FOREIGN KEY (`D12`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_13` FOREIGN KEY (`D13`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_14` FOREIGN KEY (`D14`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_15` FOREIGN KEY (`D15`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_16` FOREIGN KEY (`D16`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_17` FOREIGN KEY (`D17`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_18` FOREIGN KEY (`D18`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_19` FOREIGN KEY (`D19`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_2` FOREIGN KEY (`D2`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_20` FOREIGN KEY (`D20`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_21` FOREIGN KEY (`IDCompte`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_3` FOREIGN KEY (`D3`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_4` FOREIGN KEY (`D4`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_5` FOREIGN KEY (`D5`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_6` FOREIGN KEY (`D6`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_7` FOREIGN KEY (`D7`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_8` FOREIGN KEY (`D8`) REFERENCES `infocompte` (`IDCompte`),
+  ADD CONSTRAINT `défensequotidienne_ibfk_9` FOREIGN KEY (`D9`) REFERENCES `infocompte` (`IDCompte`);
+
+--
 -- Contraintes pour la table `guilde`
 --
 ALTER TABLE `guilde`
@@ -662,6 +1100,21 @@ ALTER TABLE `guilde`
 ALTER TABLE `guildevguilde`
   ADD CONSTRAINT `guildevguilde_ibfk_1` FOREIGN KEY (`IDGuilde`) REFERENCES `guilde` (`IDGuilde`),
   ADD CONSTRAINT `guildevguilde_ibfk_2` FOREIGN KEY (`IDGuilde2`) REFERENCES `guilde` (`IDGuilde`);
+
+--
+-- Contraintes pour la table `infocompte`
+--
+ALTER TABLE `infocompte`
+  ADD CONSTRAINT `infocompte_ibfk_1` FOREIGN KEY (`IDCompte`,`Q1`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_10` FOREIGN KEY (`IDCompte`,`Q10`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_2` FOREIGN KEY (`IDCompte`,`Q2`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_3` FOREIGN KEY (`IDCompte`,`Q3`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_4` FOREIGN KEY (`IDCompte`,`Q4`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_5` FOREIGN KEY (`IDCompte`,`Q5`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_6` FOREIGN KEY (`IDCompte`,`Q6`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_7` FOREIGN KEY (`IDCompte`,`Q7`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_8` FOREIGN KEY (`IDCompte`,`Q8`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`),
+  ADD CONSTRAINT `infocompte_ibfk_9` FOREIGN KEY (`IDCompte`,`Q9`) REFERENCES `banquedequestion` (`IDCompte`, `IDQuestion`);
 
 --
 -- Contraintes pour la table `ladder`
@@ -726,4 +1179,3 @@ ALTER TABLE `tchat`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
